@@ -25,7 +25,71 @@ body {
     width: 100%;
     height: 56px;
     padding: 10px;
+    display: flex;
     /* border: 1px solid red; */
+}
+
+.sidebar {
+    display:flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.sidebar hr {
+    opacity: 0.15;
+    margin: 10px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.sidebar .item-sidebar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 13px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    /* border: 1px solid red; */
+}
+
+.info-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    padding: 5px 5px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.sidebar .item-sidebar img,
+.sidebar .info-item img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sidebar .sidebar-list .item-sidebar a,
+.sidebar .info-sidebar .info-item a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+}
+
+.sidebar .item-sidebar:hover {
+    background: var(--btn-color);
 }
 
 .main-menu {
@@ -33,6 +97,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: calc(100% - 150px);
 }
 
 .main-menu > div {
@@ -151,6 +216,7 @@ body {
     left: 0;
     transition: 0.3s;
     width: max-content;
+    padding: 0 30px;
 }
 
 .category {
@@ -161,6 +227,10 @@ body {
     border-radius:  5px;
     color: #fff;
     cursor: pointer;
+}
+
+.category:nth-child(1){
+    margin-left: 30px;
 }
 
 .scrollBtn {
@@ -177,3 +247,24 @@ body {
 .arrow.right {
     right: 10px;
 }
+
+/* slider btns style */
+.scrollBtn {
+    color: #fff;
+    background: var(--background-color);
+    width: 40px;
+    height: 40px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* border: var(--border-color) solid; */
+}
+
+.arrow.left {
+    border-radius: 20px 0 0 20px;
+}
+
+.arrow.right {
+    border-radius: 0 20px 20px 0;
+}
+
